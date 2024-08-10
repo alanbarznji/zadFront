@@ -1,0 +1,26 @@
+:root{
+  --base-color:rgba(255, 255, 255, 0.418);
+  --second-color:#076360
+}
+body{
+  background-color: var(--base-color);
+  direction: ltr;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 12;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

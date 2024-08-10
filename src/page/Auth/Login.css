@@ -1,0 +1,10 @@
+.Login-btn{
+background-color: var(--second-color)!important;
+/* color: var(--base-color)!important; */
+
+}
+.Login-btn:hover{
+    color: var(--second-color)!important;
+    outline:1px solid var(--second-color)!important;
+    background-color: var(--base-color)!important;
+}

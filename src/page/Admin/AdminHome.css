@@ -1,0 +1,36 @@
+.AdminHome{
+    
+}
+.History > div:first-child,
+.AdminHome > div:first-child {
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--second-color);
+}
+.History .hawkarakan,
+.AdminHome .hawkarakan{
+    background-color: var(--second-color)!important;
+    transition-delay: 0.1s;
+    pointer-events: painted;
+}
+.History .hawkarakan:hover,
+.AdminHome .hawkarakan:hover{
+    background-color: var(--base-color)!important;
+ 
+}
+.History .hawkarakan:hover div,
+.AdminHome .hawkarakan:hover div{
+    background-color: var(--base-color)!important;
+    color: var(--second-color)!important;
+    border: 1px var(--second-color) solid;
+ 
+}
+.History .hawkarakan div,
+.AdminHome  .hawkarakan div{
+ border: 1px var(--base-color) solid;
+ padding: 20px 0;
+
+}
+a{
+   text-decoration:none;
+}

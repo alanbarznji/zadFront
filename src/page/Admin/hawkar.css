@@ -1,0 +1,54 @@
+.Hawkar{}
+.hawkarContainerButton{
+    width: 100% !important;
+}
+.hawkarButton{
+    width: 30% !important;
+}
+.HawkarList  {
+height: 60vh;
+ 
+}
+.HawkarList .lis{
+background-color: var(--second-color) !important;
+ 
+padding: 10px;
+border-radius: 8px;
+ 
+}
+.HawkarList .lis::-webkit-scrollbar-thumb {
+    background-color: var(--second-color);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.HawkarList .lis::-webkit-scrollbar-thumb:hover {
+    background-color:red; /* Change to the color you want */
+}
+.HawkarList .list .listItem >p{
+background-color: var(--second-color);
+color:white;
+padding: 10px;
+border-radius: 8px;
+ 
+}
+.HawkarList  > h3{
+ 
+color:var(--second-color);
+}
+.listItem > p{
+width: 95%;
+}
+.listItem > button{
+height: 45px;
+}
+.listItem {
+gap: 5px;
+}
+.headerAlert>button{
+ margin: 0 !important;
+}
+.headerAlert{
+    display: flex;
+    justify-content: space-between ;
+}

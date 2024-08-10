@@ -1,0 +1,41 @@
+.navs{ 
+    display: flex; 
+     
+    justify-content: space-between; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--second-color) !important; 
+    position: relative; 
+    } 
+    .LoginClass{ 
+        text-decoration: none; 
+        color:var(--base-color); 
+        font-weight: bold; 
+        position: relative; 
+        top: -5px; 
+    } 
+    .LoginClass >p{ 
+       position: absolute; 
+       right: -5px; 
+       top: 20px; 
+    } 
+    .DropDown{ 
+    color: white; 
+    } 
+    .DropDown  ul li a{ 
+    color: var(--second-color); 
+    } 
+    .nav-image{ 
+        background-color: white; 
+        position: relative; 
+    } 
+    .nav-image::after{ 
+        content: ''; 
+        position: absolute; 
+        background-color: white; 
+        height: 20px; 
+        width: 100%; 
+        bottom: -10px; 
+        left: 0; 
+        z-index: 0; 
+    }

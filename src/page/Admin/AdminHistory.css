@@ -1,0 +1,28 @@
+.History {
+padding: 50px 0;
+}
+.History >div{
+padding-bottom: 80px;
+}
+.History >div{
+padding-bottom: 80px;
+}
+.get_form{
+gap: 45px;
+}
+.get_form>div{
+width: 100%;
+display: flex;
+justify-content: space-around;
+}
+.get_form button{
+width: 40%;
+color: white !important;
+background-color: var(--second-color)!important;
+}
+.get_form button:hover{
+width: 40%;
+color: var(--second-color) !important;
+background-color: white !important;
+outline-color: var(--second-color) !important;
+}

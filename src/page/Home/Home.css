@@ -1,0 +1,119 @@
+*{
+    direction: rtl;
+}
+.Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+ direction: rtl;
+}
+.Home-Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.InformationAbout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ gap: 20px;
+}
+.InformationAbout div {
+   width: 100%;
+ 
+}
+.Loan >div,
+.wage >div,
+.NumberSick >div{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+.numeric{
+    position: relative;
+    width: 40%;
+top: 10px;   
+ height: 35px;
+border-radius: 8px;
+outline:1px solid white !important;
+ margin-left: 10px;
+ margin-top: 3px;
+}
+
+.qarz{
+    width:95%;
+}
+option.success {
+    color: white !important;
+    background-color: rgb(22, 133, 22) !important;
+    padding: 10px 0;
+  }
+  
+  option.warning {
+    color: white!important;
+    background-color: rgb(184, 126, 20) !important;
+    padding: 10px 0;
+  }
+  
+  option.danger {
+    color: white !important;
+    background-color: rgb(136, 23, 23) !important;
+    padding: 10px 0;
+  }
+select{
+    color: white !important;
+    background-color: var(--second-color) !important
+}
+input{
+    color: white !important;
+    background-color: var(--second-color) !important
+}
+textarea{
+    color: white !important;
+    background-color: var(--second-color) !important
+}
+select::placeholder{
+    color: rgba(255, 255, 255, 0.89)  !important;
+
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.89)  !important;
+
+}
+textarea::placeholder{
+    color: rgba(255, 255, 255, 0.89) !important;
+
+}
+label{
+    color: var(--second-color) !important;
+}
+.insertButton{
+    display: flex;
+    justify-content: end;
+    width: 100% !important;
+    align-self: center;
+}
+.insertButton >button{
+    color: white;
+    background-color: var(--second-color) !important;
+
+    width: 25% ;
+    margin-bottom: 50px;
+position: relative;
+}
+.insertButton >button:hover{
+content: "";
+/* position: absolute; */
+color: var(--second-color);
+    background-color: white  !important;
+    border: 1px solid var(--second-color);
+}
+.line{
+    height: 1px !important;
+    width: 100%;
+    background-color: var(--second-color);
+}
