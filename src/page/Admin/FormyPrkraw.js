@@ -435,16 +435,21 @@ console.log(data?data.image:null,'selo');
 }} type="number" className="numeric"/>
           </div>
           <div>
-                        <label for="upload-photo" className='pt-5'>
-                            <img
-                                src={data?data.image:null}
-                                alt="fzx"
-                                height="300px"
-                                width="100%"
-                                style={{ cursor: "pointer" }}
-                            />
-                        </label>
-   
+            {
+              data.image.map((e)=>{
+                console.log(e,"jdksjdkjjsk");
+                return<label for="upload-photo" className='pt-5'>
+                    <img
+                        src={e}
+                        alt="fzx"
+                        height="300px"
+                        width="100%"
+                        style={{ cursor: "pointer" }}
+                    />
+                </label>
+
+              })
+            }
                     </div>
         </div>
         <div className="insertButton d-flex justify-content-around pt-5">

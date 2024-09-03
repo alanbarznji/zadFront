@@ -3,9 +3,9 @@ import "./Home.css";
 import { ToastContainer, toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { Form_Post, Form_Posts, Halsangandn_Posts } from "../../Redux/Action/FormAction";
+import MultiImageInput from "react-multiple-image-input";
 const Home = () => {
     const [ID, setID] = useState(localStorage.getItem("ID"))
- 
   const [formData, setFormData] = useState({
     NameH: '',
     NameS: '',
@@ -22,7 +22,7 @@ const Home = () => {
     trust: { IdValue: '0', text: '',value:'' },
     Car: { IdValue: '0', text: '',value:'' }
   });
-  const [img, setImg] = useState('')
+  const [img, setImg] = useState([])
   const [selectedFile, setSelectedFile] = useState(null)
 
   const [Halsangandn, setHalsangandn] = useState({
@@ -61,7 +61,7 @@ setID(localStorage.getItem("ID"))
 const Halsangand=async()=>{
   setID(localStorage.getItem(ID))
   setLoading(true)
-  console.log(Id?Id.data?Id.data._id:null:null);
+  console.log(Id?Id.data?Id.data._id:null:null,"kdkdkkkdkkd");
  await dispatch(Halsangandn_Posts({id:ID,HDetails:Halsangandn.HDetails,HDetailsValue:Halsangandn.HDetailsValue})) 
   setLoading(false)
 
@@ -75,8 +75,14 @@ const Halsangand=async()=>{
     }))
   };
  const FormDate=async()=>{
-   
+   console.log(ID);
   if(!ID){
+const allimg=Array.from(Array(Object.keys(img).length).keys()).map(
+  (item,index)=>{
+    return dataURLtoFile(img[item],Math.random()+".png")
+  }
+)
+console.log(allimg,"ldlldldldl");
     setLoading(true) 
  
   const formDatas = new FormData();
@@ -111,8 +117,7 @@ const Halsangand=async()=>{
   formDatas.append('Trust', optionValues.trust.text);
   formDatas.append('TrustValue', optionValues.trust.value);
   formDatas.append('TrustValueId', optionValues.trust.IdValue);
-  formDatas.append('image',selectedFile);
-
+  allimg.map(e=>formDatas.append('image',e))
   await dispatch(Form_Posts(formDatas));
 
   setLoading(false); 
@@ -123,11 +128,27 @@ const Halsangand=async()=>{
  
   
  }
+ function dataURLtoFile(dataurl, filename) {
+console.log(dataurl,filename,"dlddllllll");
+        var arr = dataurl.split(','),
+            mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]),
+            n = bstr.length,
+            u8arr = new Uint8Array(n);
+
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+
+        return new File([u8arr], filename, { type: mime });
+    }
  const onImageChange = (event) => {
-  if (event.target.files && event.target.files[0]) {
-      setImg(URL.createObjectURL(event.target.files[0]))
-      setSelectedFile(event.target.files[0])
-  }
+  setSelectedFile(Array.from(Array(Object.keys(img).length).keys).map(
+    (item,index)=>{
+      return dataURLtoFile(img[item],Math.random()+".png")
+    }
+  ))
+      console.log(selectedFile);
 }
   const getMinValue = (option) => {
     if (option.IdValue === '1') return -10;
@@ -158,7 +179,7 @@ const Halsangand=async()=>{
       }
     }
   },[Loading,err,status])
- 
+ console.log(img,"dkkdkdk");
   return (
     <div className="Home">
       
@@ -360,6 +381,13 @@ const Halsangand=async()=>{
                                 style={{ cursor: "pointer" }}
                             />
                         </label>
+                        <MultiImageInput 
+                        images={img}
+                        setImages={setImg}
+                        theme={'light'}
+                        cropConfig={true}
+                        max={5}
+                        />
                         <input
                             type="file"
                             name="photo"
