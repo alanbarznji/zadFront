@@ -9,7 +9,7 @@ export const Form_Posts = (
     return async (dispatch) => {
         try {
 
-            const res = await axios.post("http://195.200.14.205:9000/api/v1/fh", 
+            const res = await axios.post("https://195.200.14.205:9000/api/v1/fh", 
                 formDatas
             ,{
                 headers:{
@@ -43,7 +43,7 @@ export const Halsangandn_Posts = ({
     return async (dispatch) => {
         try {
   
-            const res = await axios.post(`http://195.200.14.205:9000/api/v1/fh/Hd/${id}`, {
+            const res = await axios.post(`https://195.200.14.205:9000/api/v1/fh/Hd/${id}`, {
                 HDetails
                 ,
                 HDetailsValue
@@ -73,7 +73,7 @@ export const Form_Gets = (Accept,token) => {
     return async (dispatch) => {
         try {
             
-            const res = await axios.get(`http://195.200.14.205:9000/api/v1/fh?Accept=${Accept}`,{
+            const res = await axios.get(`https://195.200.14.205:9000/api/v1/fh?Accept=${Accept}`,{
                 headers:{
                     'Content-Type':"application/json",
                     Authorization:`Bearer ${  localStorage.getItem('auth_token')}`
@@ -99,7 +99,7 @@ export const Form_one_Gets = (id) => {
     return async (dispatch) => {
         try {
             
-            const res = await axios.get(`http://195.200.14.205:9000/api/v1/fh/${id}`,{
+            const res = await axios.get(`https://195.200.14.205:9000/api/v1/fh/${id}`,{
                 headers:{
                     'Content-Type':"application/json",
                     Authorization:`Bearer ${localStorage.getItem('auth_token')}`
@@ -162,7 +162,7 @@ export const Form_Puts = ({
 }) => {
     return async (dispatch) => {
         try {
-            const res = await axios.put(`http://195.200.14.205:9000/api/v1/fh/${id}`, {
+            const res = await axios.put(`https://195.200.14.205:9000/api/v1/fh/${id}`, {
                 NameH,
                 NameS,
                 Number,
