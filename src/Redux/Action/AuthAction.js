@@ -14,7 +14,7 @@ export const Auth_Login = (email, password) => {
 
       
       const res = await axios.post(
-        "http://localhost:9000/api/v1/auth/login",
+        "http://195.200.14.205:9000/api/v1/auth/login",
         {
           email,
           password,
@@ -47,7 +47,7 @@ export const Auth_Login = (email, password) => {
 export const Halsangandn_Posts = ({ id, HDetails, HDetailsValue }) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post(`http://localhost:9000/api/v1/fh/Hd/${id}`, {
+      const res = await axios.post(`http://195.200.14.205:9000/api/v1/fh/Hd/${id}`, {
         HDetails,
         HDetailsValue,
       });
@@ -71,7 +71,7 @@ export const Form_Gets = (Accept) => {
   return async (dispatch) => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/api/v1/fh?Accept=${Accept}`,
+        `http://195.200.14.205:9000/api/v1/fh?Accept=${Accept}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -97,7 +97,7 @@ export const Form_Gets = (Accept) => {
 export const Form_one_Gets = (id) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`http://localhost:9000/api/v1/fh/${id}`, {
+      const res = await axios.get(`http://195.200.14.205:9000/api/v1/fh/${id}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -159,7 +159,7 @@ export const Form_Puts = ({
 }) => {
   return async (dispatch) => {
     try {
-      const res = await axios.put(`http://localhost:9000/api/v1/fh/${id}`, {
+      const res = await axios.put(`http://195.200.14.205:9000/api/v1/fh/${id}`, {
         NameH,
         NameS,
         Number,

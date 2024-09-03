@@ -5,7 +5,7 @@ export const Hawkar_Posts = (NameH) => {
   return async (dispatch) => {
     try {
       const res = await axios.post(
-        "http://localhost:9000/api/v1/h",
+        "http://195.200.14.205:9000/api/v1/h",
         { NameH },
         {
           headers:{
@@ -35,7 +35,7 @@ export const Hawkar_Gets = () => {
   return async (dispatch) => {
     try {
       const res = await axios.get(
-        `http://localhost:9000/api/v1/h`
+        `http://195.200.14.205:9000/api/v1/h`
       ,{
           headers:{
               'Content-Type':"application/json",
@@ -66,7 +66,7 @@ export const Hawkar_Delete = (
 ) => {
   return async (dispatch) => {
     try {
-      const res = await axios.delete(`http://localhost:9000/api/v1/h/${id}`,{
+      const res = await axios.delete(`http://195.200.14.205:9000/api/v1/h/${id}`,{
         headers:{
             'Content-Type':"application/json",
             Authorization:`Bearer ${  localStorage.getItem('auth_token')}`
